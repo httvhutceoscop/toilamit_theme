@@ -1,4 +1,6 @@
 <?php
+require get_template_directory() . '/options/options.php';
+
 add_action( 'after_setup_theme', 'toilamit_setup' );
 function toilamit_setup()
 {

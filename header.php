@@ -1,3 +1,7 @@
+<?php 
+//get theme options
+$options = get_option( 'toilamit_options' );
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -5,6 +9,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		<?php wp_head(); ?>
+    <?php 
+    if(isset($options['google_analytic'])) {
+      echo $options['google_analytic'];
+    }
+    ?>
 	</head>
 <body <?php body_class(); ?>>
 	<!-- Navigation -->
